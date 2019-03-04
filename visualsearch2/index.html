@@ -1,42 +1,45 @@
-
+<!DOCTYPE html>
+<html>
 <head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <title>Part 2 : Cognitive Models for Visual Search</title>
-    <meta name="HandheldFriendly" content="True">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Menu Search</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" type="text/css" href="../assets/built/screen.css?v=ab86bfa1f5">
+    <link rel="stylesheet" type="text/css" href="../assets/built/screen.css?v=ed2fa666ad" />
 
-    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-    <link rel="canonical" href="index.html">
-    <meta name="referrer" content="no-referrer-when-downgrade">
-    <link rel="amphtml" href="amp/index.html">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <link rel="canonical" href="index.html" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <link rel="amphtml" href="amp/index.html" />
     
-    <meta property="og:site_name" content="Reproducible Machine Learning">
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="Part 2 : Cognitive Models for Visual Search">
-    <meta property="og:description" content="In Part 1 of this series, we discussed how simulating users behaviour would be the second step in the pipeline of building Adaptive Interfaces that personalise to user's needs. In this post, we would consider one such simulator model for the task of Visual Search in drop down Menus. Let">
-    <meta property="og:url" content="http://localhost:2368/visualsearch2/">
-    <meta property="og:image" content="http://localhost:2368/content/images/2019/01/selection_time-1.png">
-    <meta property="article:published_time" content="2019-01-01T06:22:00.000Z">
-    <meta property="article:modified_time" content="2019-01-08T18:59:39.000Z">
-    <meta property="article:tag" content="Human Computer Interaction">
-    <meta property="article:tag" content="Reinforcement Learning">
-    <meta property="article:tag" content="User Interfaces">
-    <meta property="article:tag" content="Menu Models">
+    <meta property="og:site_name" content="Reproducible Machine Learning" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Visual Menu Search" />
+    <meta property="og:description" content="How does users performance vary across Menu layouts and could we simulate user behaviour with a Reinforcement learning. Let&#x27;s find out!" />
+    <meta property="og:url" content="http://localhost:2368/visualsearch2/" />
+    <meta property="og:image" content="http://localhost:2368/content/images/2019/03/selection_time-1.png" />
+    <meta property="article:published_time" content="2019-01-01T06:22:00.000Z" />
+    <meta property="article:modified_time" content="2019-03-04T04:11:49.000Z" />
+    <meta property="article:tag" content="Human Computer Interaction" />
+    <meta property="article:tag" content="Reinforcement Learning" />
+    <meta property="article:tag" content="User Interfaces" />
+    <meta property="article:tag" content="Menu Models" />
     
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Part 2 : Cognitive Models for Visual Search">
-    <meta name="twitter:description" content="In Part 1 of this series, we discussed how simulating users behaviour would be the second step in the pipeline of building Adaptive Interfaces that personalise to user's needs. In this post, we would consider one such simulator model for the task of Visual Search in drop down Menus. Let">
-    <meta name="twitter:url" content="http://localhost:2368/visualsearch2/">
-    <meta name="twitter:image" content="http://localhost:2368/content/images/2019/01/selection_time-1.png">
-    <meta name="twitter:label1" content="Written by">
-    <meta name="twitter:data1" content="Aasheesh Singh">
-    <meta name="twitter:label2" content="Filed under">
-    <meta name="twitter:data2" content="Human Computer Interaction, Reinforcement Learning, User Interfaces, Menu Models">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Visual Menu Search" />
+    <meta name="twitter:description" content="How does users performance vary across Menu layouts and could we simulate user behaviour with a Reinforcement learning. Let&#x27;s find out!" />
+    <meta name="twitter:url" content="http://localhost:2368/visualsearch2/" />
+    <meta name="twitter:image" content="http://localhost:2368/content/images/2019/03/selection_time-1.png" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Aasheesh Singh" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Human Computer Interaction, Reinforcement Learning, User Interfaces, Menu Models" />
+    <meta property="og:image:width" content="627" />
+    <meta property="og:image:height" content="466" />
     
     <script type="application/ld+json">
 {
@@ -64,13 +67,18 @@
         "url": "http://localhost:2368/author/ash/",
         "sameAs": []
     },
-    "headline": "Part 2 : Cognitive Models for Visual Search",
+    "headline": "Visual Menu Search",
     "url": "http://localhost:2368/visualsearch2/",
     "datePublished": "2019-01-01T06:22:00.000Z",
-    "dateModified": "2019-01-08T18:59:39.000Z",
-    "image": "http://localhost:2368/content/images/2019/01/selection_time-1.png",
+    "dateModified": "2019-03-04T04:11:49.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "http://localhost:2368/content/images/2019/03/selection_time-1.png",
+        "width": 627,
+        "height": 466
+    },
     "keywords": "Human Computer Interaction, Reinforcement Learning, User Interfaces, Menu Models",
-    "description": "In Part 1 of this series, we discussed how simulating users behaviour would be the second step in the pipeline of building Adaptive Interfaces that personalise to user&#x27;s needs. In this post, we would consider one such simulator model for the task of Visual Search in drop down Menus. Let",
+    "description": "How does users performance vary across Menu layouts and could we simulate user behaviour with a Reinforcement learning. Let&#x27;s find out!",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "http://localhost:2368/"
@@ -78,15 +86,15 @@
 }
     </script>
 
-    <script src="../public/ghost-sdk.js?v=ab86bfa1f5"></script>
+    <script src="../public/ghost-sdk.js?v=ed2fa666ad"></script>
 <script>
 ghost.init({
 	clientId: "ghost-frontend",
 	clientSecret: "7823682a7551"
 });
 </script>
-    <meta name="generator" content="Ghost 2.14">
-    <link rel="alternate" type="application/rss+xml" title="Reproducible Machine Learning" href="../rss/index.html">
+    <meta name="generator" content="Ghost 2.14" />
+    <link rel="alternate" type="application/rss+xml" title="Reproducible Machine Learning" href="../rss/index.html" />
 
 </head>
 <body class="post-template tag-human-computer-interaction tag-reinforcement-learning tag-user-interfaces tag-menu-models">
@@ -99,10 +107,10 @@ ghost.init({
     <div class="inner">
         <nav class="site-nav">
     <div class="site-nav-left">
-                <a class="site-nav-logo" href="../">Reproducible Machine Learning</a>
+                <a class="site-nav-logo" href="../index.html">Reproducible Machine Learning</a>
             <ul class="nav" role="menu">
-    <li class="nav-home" role="menuitem"><a href="../">Home</a></li>
-    <li class="nav-about" role="menuitem"><a href="../author/ash/">About</a></li>
+    <li class="nav-home" role="menuitem"><a href="../index.html">Home</a></li>
+    <li class="nav-about" role="menuitem"><a href="../author/ash/index.html">About</a></li>
     <li class="nav-github" role="menuitem"><a href="https://github.com/ashdtu">Github</a></li>
 </ul>
 
@@ -110,7 +118,7 @@ ghost.init({
     <div class="site-nav-right">
         <div class="social-links">
         </div>
-            <a class="rss-button" href="http://cloud.feedly.com/#subscription/feed/http://localhost:2368/rss/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><circle cx="6.18" cy="17.82" r="2.18"></circle><path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"></path></svg>
+            <a class="rss-button" href="http://cloud.feedly.com/#subscription/feed/http://localhost:2368/rss/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="6.18" cy="17.82" r="2.18"/><path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/></svg>
 </a>
     </div>
 </nav>
@@ -126,16 +134,16 @@ ghost.init({
             <header class="post-full-header">
                 <section class="post-full-meta">
                     <time class="post-full-meta-date" datetime="2019-01-01">1 January 2019</time>
-                        <span class="date-divider">/</span> <a href="../tag/human-computer-interaction/">Human Computer Interaction</a>
+                        <span class="date-divider">/</span> <a href="../tag/human-computer-interaction/index.html">Human Computer Interaction</a>
                 </section>
                 <h1 class="post-full-title">Part 2 : Cognitive Models for Visual Search</h1>
             </header>
 
-            <figure class="post-full-image" style="background-image: url(http://localhost:2368/content/images/2019/01/selection_time-1.png)">
+            <figure class="post-full-image" style="background-image: url(../content/images/2019/03/selection_time-1.png)">
             </figure>
 
             <section class="post-full-content">
-                <p>In <a href="https://ashsingh.me/visualsearch1/">Part 1</a> of this series, we discussed how simulating users behaviour would be the second step in the pipeline of building Adaptive Interfaces that personalise to user's needs. In this post, we would consider one such simulator model for the task of Visual Search in drop down Menus.</p>
+                <p>In <a href="https://aasheeshsingh.me/visualsearch1/">Part 1</a> of this series, we discussed how simulating users behaviour would be the second step in the pipeline of building Adaptive Interfaces that personalise to user's needs. In this post, we would consider one such simulator model for the task of Visual Search in drop down Menus.</p>
 <p>Let us start with an example where our goal is to build a UI targeted towards a particular demographic(say, Medicine/Health tracking app for Elderly). One way we could approach this problem is to conduct experiments and use the insights gained (avg response time for selection, visual acuity, readability preference etc) in our design choices(font, color, layout, shortcuts, input methods) to ease usage amongst that demographic. This works well, but is expensive and takes time to conduct individual experiments. To avoid or aid this process, developing simulated models that mimic users strategy have been an active area of research in HCI. Broadly such methods can be divided into three categories:</p>
 <ul>
 <li>Map based( Salience, activation)</li>
@@ -143,7 +151,7 @@ ghost.init({
 <li>Optimal Control based</li>
 </ul>
 <p>In this post our subject of interest would be Optimal Control methods or <strong>Computationally rational models</strong>. They are based on the idea that user behaviour emerges to maximise underlying <em>Utility</em> under cognitive and perceptual limits. Thus the user <em>strategy</em> emerges as an optimal policy and hence it's called a Computationally rational model.<br>
-<img src="http://localhost:2368/content/images/2019/01/Screenshot-from-2019-01-06-12-08-47.png" alt="Screenshot-from-2019-01-06-12-08-47"></p>
+<img src="../content/images/2019/03/edit1.png" alt="edit1"></p>
 <p>One such task which can be modeled as a rational behaviour is searching through a Menu to find a target item. Visual Search is something that we do hundreds of times a day and therefore is a necessary step in ultimately solving Visual Intelligence.</p>
 <hr>
 <p>The idea of using Reinforcement learning to derive computationally rational strategies to solve a Visual Search task was introduced in this work. <a href="http://users.comnet.aalto.fi/oulasvir/pubs/pn1895-pcs-pdf.pdf">Chen X.,Bailly G., Brumby D., Oulasvirta A.,Howes A.<strong>The Emergence of Interactive Behaviour:A Model of Rational Menu Search</strong>,2015</a>. The authors investigate the effect of Menu organization <b>(Alphabetic,Semantic, Unordered)</b> and Menu length on the <em>emergent</em> optimal strategy and compare the model predictions with empirical findings.</p>
@@ -169,12 +177,12 @@ ghost.init({
 </ul>
 <p>With the state space now being continuous and hence having practically infinite states a tabular Q learning method such as the one used in the above paper wouldn't work without some sort of Function approximation. We used a <strong>Gaussian Process</strong> method <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.81.6420&amp;rep=rep1&amp;type=pdf">GP-SARSA</a> to approximate the Q function and make use of the covariance matrix to aid the agent's exploration strategy.</p>
 <p>The advantage of using such Bayesian methods over currently popular Deep learning/Gradient based methods is that it allows us to encode the prior information from a HCI research perspective in a structured way. This is essential when we are trying to form a simulator model whose eventual aim is to be able to explain empirical findings.</p>
-<p>For a complete study of the RL learner Gaussian Process-SARSA there would be another post in the "Reproducibility in Machine Learning" series where I would reproduce the experiments of the original work on a Maze environment.</p>
+<p>For a complete study of the RL learner Gaussian Process-SARSA there would be another post in the &quot;Reproducibility in Machine Learning&quot; series where I would reproduce the experiments of the original work on a Maze environment.</p>
 <hr>
 <h3 id="modeloverview">Model Overview</h3>
-<p><img src="http://localhost:2368/content/images/2019/01/pomdp_menu.png" alt="pomdp_menu"></p>
+<p><img src="../content/images/2019/03/pomdp_menu.png" alt="pomdp_menu"></p>
 <p>The two versions of the GP-SARSA learner were implemented with sparse and non sparse dictionary. In the sparsified version, a threshold (hyperparameter) determines which state transitions or steps would be used as data points to fit our Gaussian prior. This reduces the execution time of the algorithm from O(t<sup>3</sup>) to O(tm<sup>2</sup>) where t=total transitions and m=data points in dictionary. The ratio of 'm' to 't' is controlled by threshold parameter.</p>
-<p>To get a starting point regarding the setting of this threshold i plotted the distribution of the values that this threshold controls(delta). <img src="http://localhost:2368/content/images/2019/01/threshold.png" alt="threshold"></p>
+<p>To get a starting point regarding the setting of this threshold i plotted the distribution of the values that this threshold controls(delta). <img src="../content/images/2019/03/threshold.png" alt="threshold"></p>
 <p>With experiments, i observed that a value of 0.5 works best. A higher value excludes a lot of potentially important transitions and a lower value has repetitive transitions with not much entropy.</p>
 <h3 id="policy">Policy</h3>
 <p>The learner was trained with the following action selection policies:</p>
@@ -200,30 +208,31 @@ ghost.init({
 <h3 id="experiments">Experiments</h3>
 <p>In the aforementioned work, authors conducted experiments to measure <strong>Selection time</strong> in the Visual Search task to measure how a learner trained on one type of Menu performs across other menus.(on which it was not trained). The Selection time is made up of the time to fixate on an item and saccade duration. Their model corroborated what they observed in empirical data that Alphabetic menu layout is the most efficient in terms of selection time. In the results below, a comparison between Semantic and Unordered layout is done(Alphabetic to follow). The policy is trained on Semantically organised Menu items and the agent's selection time and Gaze proportion is evaluated on Semantic and Unordered Menus.</p>
 <p><strong>Selection Time:</strong><br>
-We compare the Selection Times of our learner with the results in the above work.<br>
-<img src="http://localhost:2368/content/images/2019/01/Screenshot-from-2019-01-08-19-30-23.png" alt="Screenshot-from-2019-01-08-19-30-23"></p>
+We compare the Selection Times of our learner with the results in the above work.</p>
+<p><img src="../content/images/2019/03/Screenshot-from-2019-01-08-19-30-23.png" alt="Screenshot-from-2019-01-08-19-30-23"></p>
 <center> Fig.5 Search Duration with 95% CI, Chen et.al,2015</center>
 <p>The above plot shows the Selection Time for the visual search task in a 10 item Menu. The agent's performance was recorded before and after training on Alphabetic, Semantic and Unordered Menus. For semantically trained learners, the mean selection time is 2000 ms and <u>avg steps ~ 4.6 </u>(~ 437ms per fixation) before making a selection.</p>
 <p>We demonstrate a similar plot for the learner's performance before and after training where it's trained on a Semantically organised Menu and its selection time is compared to its performance on an Unordered Menu(more comprehensive evaluation across menus to follow). For our experiments we used a 8 item Menu grouped in 2 and it took on an <u> avg~ 2.8 steps to successful selection</u> in a Semantic Menu.</p>
-<p><img src="http://localhost:2368/content/images/2019/01/selection_time.png" alt="selection_time"></p>
+<p><img src="../content/images/2019/03/selection_time.png" alt="selection_time"></p>
 <p><strong>Gaze Proportion</strong></p>
-<p>Analyzing the gaze distribution of the user when it's interacting with an Interface is a key to building personalised adaptive UIs. We looked in <a href="https://ashsingh.me/visualsearch1/">Part 1</a> of this series how UI designers are interested in knowing about user's behavior(through mouse movements or gaze) when interacting with their product and thus Gaze Analytics as a Service has become an essential tool for them.(<a href="https://heatmap.com/">Heat Map Inc</a> sells such analytics services as Javascript wrappers)</p>
+<p>Analyzing the gaze distribution of the user when it's interacting with an Interface is a key to building personalised adaptive UIs. We looked in <a href="https://aasheeshsingh.me/visualsearch1/">Part 1</a> of this series how UI designers are interested in knowing about user's behavior(through mouse movements or gaze) when interacting with their product and thus Gaze Analytics as a Service has become an essential tool for them.(<a href="https://heatmap.com/">Heat Map Inc</a> sells such analytics services as Javascript wrappers)</p>
 <p>Continuing in similar fashion ,we take a look at the <strong>Gaze proportions</strong> on the Target item while navigating the Menu, first from the <a href="http://users.comnet.aalto.fi/oulasvir/pubs/pn1895-pcs-pdf.pdf">Chen et.al,2015</a> and then our experiments.</p>
-<p><img src="http://localhost:2368/content/images/2019/01/1.png" alt="1"></p>
+<p><img src="../content/images/2019/03/1.png" alt="1"></p>
 <p>Down below, are the plots for <strong>Gaze proportions</strong> in the learned policies trained on Semantic Menus compared with Unordered Menu and Initial untrained learner.</p>
-<p><img src="http://localhost:2368/content/images/2019/01/gaze.png" alt="gaze"></p>
+<p><img src="../content/images/2019/03/Gaze_distribution-1.png" alt="Gaze_distribution-1"></p>
 <p>Here we can see that an untrained agent, distributes the gaze evenly among all target items while the trained policy has learnt to focus on specific items in the menu while looking for target.</p>
 <p>The reason for such high gaze proportion when the Target is at 3(0 indexed x axis) is because the policy learnt to fixate on Item 3 as the first action to be taken for each episode, <u>as it allows the agent to encode the semantic relevances of both groups in the menu through peripheral vision</u> (encode info of one item above and down from fixation location) and update the belief state.</p>
-<p><img src="http://localhost:2368/content/images/2019/01/gaze2.png" alt="gaze2"></p>
+<p><img src="../content/images/2019/03/gaze2.png" alt="gaze2"></p>
+<center> Fig: Gaze distribution over Menu types </center>
 <hr>
 <h3 id="conclusion">Conclusion</h3>
-<p>The work in Chen et. al,2015 assumes a <u>fully observable</u> and <u>deterministic</u> Ecology structure where the user knows exactly the relevances of the menu items. This is what our model would formulate as Expert behaviour in terms of observation mechanism. The inclusion of a internal belief distribution whose divergence from this expert true distribution could be used to model the "Familiarity" or "<strong>proficiency</strong>" of the user in this task.</p>
+<p>The work in Chen et. al,2015 assumes a <u>fully observable</u> and <u>deterministic</u> Ecology structure where the user knows exactly the relevances of the menu items. This is what our model would formulate as Expert behaviour in terms of observation mechanism. The inclusion of a internal belief distribution whose divergence from this expert true distribution could be used to model the &quot;Familiarity&quot; or &quot;<strong>proficiency</strong>&quot; of the user in this task.</p>
 <p>A user who shows a  different mental ability(people with special needs) or cognitive load while doing such tasks would have a different observed behaviour(in terms of selection time/utility) and thus may not fit this model. What our model attempts is to <u>encode such Proficiency as a parameter</u> and also makes it easy to introduce other perceptual signals(apart from semantic and shape) without changing the learner or the environment structure.</p>
 <p>In part 1 of this series I have written about how personalization in Streaming,E-commerce and Advertisements has helped us build better products. I believe Interfaces that adapt and change according to the cognitive skills of the user are the next step to building better software.</p>
 <p>The other features of this model are <u>scalablity</u> and dealing with observation noise. A tabular Q learner such as one used in the paper suffers from curse of dimensionality as we scale the state-action space, while this continuous model would be better suited to encode further perceptual information and corresponding noise.</p>
 <hr>
 <blockquote>
-<h4 id="inpart3ofthishciseriesnextweekthegoalwouldbetoreportcomprehensivestudiesforthismodelandhowbayesianinferencecouldbeusedforparametertuning">In part 3 of this HCI series next week the goal would be to report comprehensive studies for this model and how Bayesian inference could be used for parameter tuning.</h4>
+<h4 id="inpart3ofthishciserieswewouldinvestigatehowlikelihoodfreeinferencemethodsapproximatebayesiancomputationcouldbeusedtodeduceparametersofthismodelinainverselearningtypeparadigm">In part 3 of this HCI series we would investigate how Likelihood-free inference methods(Approximate Bayesian Computation) could be used to deduce parameters of this model in a inverse learning type paradigm.</h4>
 </blockquote>
 
             </section>
@@ -232,14 +241,14 @@ We compare the Selection Times of our learner with the results in the above work
             <footer class="post-full-footer">
 
                 <section class="author-card">
-                        <img class="author-profile-image" src="../content/images/2019/02/profile3.jpg" alt="Aasheesh Singh">
+                        <img class="author-profile-image" src="../content/images/2019/02/profile3.jpg" alt="Aasheesh Singh" />
                     <section class="author-card-content">
-                        <h4 class="author-card-name"><a href="../author/ash/">Aasheesh Singh</a></h4>
-                            <p>Read <a href="../author/ash/">more posts</a> by this author.</p>
+                        <h4 class="author-card-name"><a href="../author/ash/index.html">Aasheesh Singh</a></h4>
+                            <p>Read <a href="../author/ash/index.html">more posts</a> by this author.</p>
                     </section>
                 </section>
                 <div class="post-full-footer-right">
-                    <a class="author-card-button" href="../author/ash/">Read More</a>
+                    <a class="author-card-button" href="../author/ash/index.html">Read More</a>
                 </div>
 
             </footer>
@@ -254,50 +263,52 @@ We compare the Selection Times of our learner with the results in the above work
     <div class="inner">
         <div class="read-next-feed">
 
-                <article class="read-next-card" style="background-image: url(../content/images/2019/02/abstract-art-black-background-1040499-1.jpg)">
+                <article class="read-next-card"
+                            style="background-image: url(../content/images/2019/02/abstract-art-black-background-1040499-1.jpg)"
+                >
                     <header class="read-next-card-header">
-                        <small class="read-next-card-header-sitetitle">— Reproducible Machine Learning —</small>
-                        <h3 class="read-next-card-header-title"><a href="../tag/human-computer-interaction/">Human Computer Interaction</a></h3>
+                        <small class="read-next-card-header-sitetitle">&mdash; Reproducible Machine Learning &mdash;</small>
+                        <h3 class="read-next-card-header-title"><a href="../tag/human-computer-interaction/index.html">Human Computer Interaction</a></h3>
                     </header>
-                    <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"></path></svg>
+                    <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
 </div>
                     <div class="read-next-card-content">
                         <ul>
-                            <li><a href="../visualsearch1/">Adaptive User Interfaces: Software 3.0</a></li>
+                            <li><a href="../visualsearch1/index.html">Building Adaptive Interfaces: Software 3.0</a></li>
                         </ul>
                     </div>
                     <footer class="read-next-card-footer">
-                        <a href="../tag/human-computer-interaction/">1 post →</a>
+                        <a href="../tag/human-computer-interaction/index.html">1 post →</a>
                     </footer>
                 </article>
 
                 <article class="post-card post tag-human-computer-interaction tag-reinforcement-learning featured">
-        <a class="post-card-image-link" href="../visualsearch1/">
-            <div class="post-card-image" style="background-image: url(http://localhost:2368/content/images/2019/01/Screenshot-from-2019-01-05-15-31-15-3.png)"></div>
+        <a class="post-card-image-link" href="../visualsearch1/index.html">
+            <div class="post-card-image" style="background-image: url(../content/images/2019/03/1_dt5fOj7biRR1L91ixI1iew-1.png)"></div>
         </a>
     <div class="post-card-content">
-        <a class="post-card-content-link" href="../visualsearch1/">
+        <a class="post-card-content-link" href="../visualsearch1/index.html">
             <header class="post-card-header">
                     <span class="post-card-tags">Human Computer Interaction</span>
-                <h2 class="post-card-title">Adaptive User Interfaces: Software 3.0</h2>
+                <h2 class="post-card-title">Building Adaptive Interfaces: Software 3.0</h2>
             </header>
             <section class="post-card-excerpt">
                 <p>Andrew Ng predicted the impact Machine Learning would have on the way we develop software.Could we use ML to make User Interactive Models smarter as well? Let's find out!</p>
             </section>
         </a>
         <footer class="post-card-meta">
-                <img class="author-profile-image" src="../content/images/2019/02/profile3.jpg" alt="Aasheesh Singh">
-            <span class="post-card-author"><a href="../author/ash/">Aasheesh Singh</a></span>
+                <img class="author-profile-image" src="../content/images/2019/02/profile3.jpg" alt="Aasheesh Singh" />
+            <span class="post-card-author"><a href="../author/ash/index.html">Aasheesh Singh</a></span>
         </footer>
     </div>
 </article>
 
                 <article class="post-card post tag-introduction">
-        <a class="post-card-image-link" href="../private-sites/">
+        <a class="post-card-image-link" href="../private-sites/index.html">
             <div class="post-card-image" style="background-image: url(http://localhost:2368/content/images/2019/01/Paper1-20repeated-20attempts.width-600_7UiCNvo.jpg)"></div>
         </a>
     <div class="post-card-content">
-        <a class="post-card-content-link" href="../private-sites/">
+        <a class="post-card-content-link" href="../private-sites/index.html">
             <header class="post-card-header">
                     <span class="post-card-tags">Introduction</span>
                 <h2 class="post-card-title">ML Reproducibility</h2>
@@ -307,8 +318,8 @@ We compare the Selection Times of our learner with the results in the above work
             </section>
         </a>
         <footer class="post-card-meta">
-                <img class="author-profile-image" src="../content/images/2019/02/profile3.jpg" alt="Aasheesh Singh">
-            <span class="post-card-author"><a href="../author/ash/">Aasheesh Singh</a></span>
+                <img class="author-profile-image" src="../content/images/2019/02/profile3.jpg" alt="Aasheesh Singh" />
+            <span class="post-card-author"><a href="../author/ash/index.html">Aasheesh Singh</a></span>
         </footer>
     </div>
 </article>
@@ -319,22 +330,24 @@ We compare the Selection Times of our learner with the results in the above work
 
 <div class="floating-header">
     <div class="floating-header-logo">
-        <a href="../">
+        <a href="../index.html">
             <span>Reproducible Machine Learning</span>
         </a>
     </div>
-    <span class="floating-header-divider">—</span>
+    <span class="floating-header-divider">&mdash;</span>
     <div class="floating-header-title">Part 2 : Cognitive Models for Visual Search</div>
     <div class="floating-header-share">
-        <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
-    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"></path>
+        <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Part%202%20%3A%20Cognitive%20Models%20for%20Visual%20Search&amp;url=http://localhost:2368/visualsearch2/" onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
-            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"></path></svg>
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Part%202%20%3A%20Cognitive%20Models%20for%20Visual%20Search&amp;url=http://localhost:2368/visualsearch2/"
+            onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:2368/visualsearch2/" onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
-            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"></path></svg>
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:2368/visualsearch2/"
+            onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
         </a>
     </div>
     <progress class="progress" value="0">
@@ -349,9 +362,9 @@ We compare the Selection Times of our learner with the results in the above work
 
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
-                <section class="copyright"><a href="../">Reproducible Machine Learning</a> © 2019</section>
+                <section class="copyright"><a href="../index.html">Reproducible Machine Learning</a> &copy; 2019</section>
                 <nav class="site-footer-nav">
-                    <a href="../">Latest Posts</a>
+                    <a href="../index.html">Latest Posts</a>
                     
                     
                     <a href="https://ghost.org" target="_blank">Ghost</a>
@@ -362,9 +375,12 @@ We compare the Selection Times of our learner with the results in the above work
     </div>
 
 
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
     </script>
-    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=ab86bfa1f5"></script>
+    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=ed2fa666ad"></script>
 
 
     <script>
@@ -435,3 +451,4 @@ $(document).ready(function () {
     
 
 </body>
+</html>
