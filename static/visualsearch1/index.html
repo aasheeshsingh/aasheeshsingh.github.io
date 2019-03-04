@@ -8,7 +8,7 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" href="../assets/built/screen.css?v=ab86bfa1f5">
+    <link rel="stylesheet" type="text/css" href="../assets/built/screen.css?v=33a73e7e1b">
 
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
     <link rel="canonical" href="index.html">
@@ -20,9 +20,9 @@
     <meta property="og:title" content="Visual Search in Menus">
     <meta property="og:description" content="Andrew Ng predicted the impact Machine Learning would have on the way we develop software.Could we use ML to make User Interactive Models smarter as well? Let's find out!">
     <meta property="og:url" content="http://localhost:2368/visualsearch1/">
-    <meta property="og:image" content="http://localhost:2368/content/images/2019/01/Screenshot-from-2019-01-05-15-31-15-3.png">
+    <meta property="og:image" content="http://localhost:2368/content/images/2019/03/1_dt5fOj7biRR1L91ixI1iew-1.png">
     <meta property="article:published_time" content="2019-01-01T10:38:00.000Z">
-    <meta property="article:modified_time" content="2019-01-08T19:23:51.000Z">
+    <meta property="article:modified_time" content="2019-03-04T04:08:58.000Z">
     <meta property="article:tag" content="Human Computer Interaction">
     <meta property="article:tag" content="Reinforcement Learning">
     
@@ -30,11 +30,13 @@
     <meta name="twitter:title" content="Visual Search in Menus">
     <meta name="twitter:description" content="Andrew Ng predicted the impact Machine Learning would have on the way we develop software.Could we use ML to make User Interactive Models smarter as well? Let's find out!">
     <meta name="twitter:url" content="http://localhost:2368/visualsearch1/">
-    <meta name="twitter:image" content="http://localhost:2368/content/images/2019/01/Screenshot-from-2019-01-05-15-31-15-3.png">
+    <meta name="twitter:image" content="http://localhost:2368/content/images/2019/03/1_dt5fOj7biRR1L91ixI1iew-1.png">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Aasheesh Singh">
     <meta name="twitter:label2" content="Filed under">
     <meta name="twitter:data2" content="Human Computer Interaction, Reinforcement Learning">
+    <meta property="og:image:width" content="720">
+    <meta property="og:image:height" content="465">
     
     <script type="application/ld+json">
 {
@@ -65,8 +67,13 @@
     "headline": "Visual Search in Menus",
     "url": "http://localhost:2368/visualsearch1/",
     "datePublished": "2019-01-01T10:38:00.000Z",
-    "dateModified": "2019-01-08T19:23:51.000Z",
-    "image": "http://localhost:2368/content/images/2019/01/Screenshot-from-2019-01-05-15-31-15-3.png",
+    "dateModified": "2019-03-04T04:08:58.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "http://localhost:2368/content/images/2019/03/1_dt5fOj7biRR1L91ixI1iew-1.png",
+        "width": 720,
+        "height": 465
+    },
     "keywords": "Human Computer Interaction, Reinforcement Learning",
     "description": "Andrew Ng predicted the impact Machine Learning would have on the way we develop software.Could we use ML to make User Interactive Models smarter as well? Let&#x27;s find out!",
     "mainEntityOfPage": {
@@ -76,7 +83,7 @@
 }
     </script>
 
-    <script src="../public/ghost-sdk.js?v=ab86bfa1f5"></script>
+    <script src="../public/ghost-sdk.js?v=33a73e7e1b"></script>
 <script>
 ghost.init({
 	clientId: "ghost-frontend",
@@ -126,10 +133,10 @@ ghost.init({
                     <time class="post-full-meta-date" datetime="2019-01-01">1 January 2019</time>
                         <span class="date-divider">/</span> <a href="../tag/human-computer-interaction/">Human Computer Interaction</a>
                 </section>
-                <h1 class="post-full-title">Adaptive User Interfaces: Software 3.0</h1>
+                <h1 class="post-full-title">Building Adaptive Interfaces: Software 3.0</h1>
             </header>
 
-            <figure class="post-full-image" style="background-image: url(http://localhost:2368/content/images/2019/01/Screenshot-from-2019-01-05-15-31-15-3.png)">
+            <figure class="post-full-image" style="background-image: url(../content/images/2019/03/1_dt5fOj7biRR1L91ixI1iew-1.png)">
             </figure>
 
             <section class="post-full-content">
@@ -153,16 +160,16 @@ Studying Machine learning has made me quite fond of labeling things and if I try
 </li>
 </ol>
 <p style="text-align:justify">
-In this post i would like to discuss more on <b><u>Adaptive Software</u></b> particularly the ones which are designed to be User Interfaces. Let's think of software with vast number of selection commands like <i>PhotoShop, Adobe Premiere or Illustrator</i>. Designing such interfaces and organising the layouts(drop downs) requires experienced UI Designers and involves lots of R &amp; D man-hours in user studies. Fast forward a couple of million dollars, a few offshore teams and now we have a product that has all the right things: easy readability (through user studies), Hot key shortcuts, hierarchical layouts(alphabetic,semantic etc), clean graphics and hopefully doesn't clog up the RAM. (Looking at you Slack!)
+In this post, I would like to discuss more on <b><u>Adaptive Software</u></b> particularly the ones which are designed to be User Interfaces. Let's think of software with vast number of selection commands like <i>PhotoShop, Adobe Premiere or Illustrator</i>. Designing such interfaces and organising the layouts(drop downs) requires experienced UI Designers and involves lots of R &amp; D man-hours in user studies. Fast forward a couple of million dollars, a few offshore teams and now we have a product that has all the right things: easy readability (through user studies), Hot key shortcuts, hierarchical layouts(alphabetic,semantic etc), clean graphics and hopefully doesn't clog up the RAM. (Looking at you Slack!)
 </p><p style="text-align:justify">
-Awesome right! but not really, think of this if all I want to do is to compile cat videos on Adobe Premiere or make memes on Photoshop why do i need this spatially optimised multi window 100 commands layout that has been designed considering an experienced user and would make me look at 5 drop downs to do something. Therefore for such products to cover a wider user base an adaptive or personalised interface makes sense. Supervised Machine Learning has opened doors for massive personalised content in Streaming, E-Commerce and Advertisements and Adaptive User Interfaces should be the next obvious candidate. </p>
+Awesome right! but not really, think of this if all I want to do is to compile cat videos on Adobe Premiere or make memes on Photoshop why do I need this spatially optimised multi window 100 commands layout that has been designed considering an experienced user and would make me look at 5 drop downs to do something. Therefore for such products to cover a wider user base an adaptive or personalised interface makes sense. Basically an interface that adapts from what you do. Supervised Machine Learning has opened doors for massive personalised content in Streaming, E-Commerce and Advertisements and Adaptive User Interfaces should be the next obvious candidate. </p>
 <p>We could divide the Adaptability task into three levels, each building on top of the other.</p>
 <blockquote>
 <h3 id="level1providebehavioranalyticsofusersclicktimefocusdurationheatmapofvisualacuitygazelocationsetctoaidinthedesignoftheuimenulayouts">Level 1: Provide behavior analytics of user's click time, focus duration, heat-map of visual acuity, gaze locations etc. to aid in the design of the UI Menu layouts.</h3>
 </blockquote>
 <p style="text-align:justify">
 <a href="https://heatmap.com/"> Heat Map Inc </a> provides such analytics services as a Java Script wrapper to embed in websites and monitor user's mouse click movements.Pair it up with a visual eye tracker and you have yourself a <b> Gaze analytics service to strategically design the layout or even to look for the premium spot for advertising in terms of visual acuity.</b> </p>
-<p><img src="http://localhost:2368/content/images/2019/01/Screenshot-from-2019-01-05-15-31-15-1.png" alt="Screenshot-from-2019-01-05-15-31-15-1"></p>
+<p><img src="../content/images/2019/03/1_dt5fOj7biRR1L91ixI1iew.png" alt="1_dt5fOj7biRR1L91ixI1iew"></p>
 <blockquote>
 <h3 id="level2targeteddesigns">Level 2: Targeted Designs</h3>
 </blockquote>
@@ -179,12 +186,11 @@ Awesome right! but not really, think of this if all I want to do is to compile c
 <blockquote>
 <h4 id="asanexampletheadaptiveinterfacewouldintelligentlydesignverydifferentuisforletssayourtwousersrickandmortyrickwhois38hasgoodvisionisacommandlinegeekandprefersusinghotkeysshortcutswouldhaveverydifferentpersonalisedinterfaceovermortywhois23wearsglassesandismoreefficientwithtouchpadgesturestheadaptabilitythereforereferstobeingabletomaximiseutilityforindividualusersbyobservingtheircognitionmechanismandgeneratingasuitableecologyenvironmentstructuretermsdefinedinpayneetal2013">As an example, the Adaptive interface would intelligently design very different UIs for let's say our two users, Rick and Morty. Rick who is 38, has good vision, is a command line geek and prefers using Hot keys shortcuts would have very different personalised interface over Morty who is 23, wears glasses and is more efficient with touchpad gestures. The Adaptability therefore refers to being able to maximise <strong>Utility</strong> for individual users by observing their cognition <strong>Mechanism</strong> and generating a suitable <strong>Ecology</strong>(environment structure). (Terms defined in Payne et. al,2013)</h4>
 </blockquote>
-<p><img src="http://localhost:2368/content/images/2019/01/Screenshot-from-2019-01-06-12-08-47.png" alt="Screenshot-from-2019-01-06-12-08-47"></p>
-<p>The figure belows shows a GAN architecture represented for HCI models. The training model would not necessarily be a CNN as is the case with image data and most likely would be an ensemble model depending on the data.<br>
-<img src="http://localhost:2368/content/images/2019/01/Untitled-Diagram.jpg" alt="Untitled-Diagram"></p>
+<p>The figure below shows a Generative model that would learn to sample from the distribution of the best design choices parameters.<br>
+<img src="../content/images/2019/03/1_AGOoq5Xx-98wa2zMyORvYw.jpeg" alt="1_AGOoq5Xx-98wa2zMyORvYw"></p>
 <hr>
 <blockquote>
-<h4 id="inpart2ofthisserieswewouldfocusonthelevel2modeliesimulatingtheuserwewouldmodelthetaskofvisuallysearchingatargetiteminthemenuareinforcementlearningagentwouldmodelthecognitivebehaviouroftheusertoderivearationalstrategyofsearchingthetargetitempart2visualsearch">In Part 2 of this series we would focus on the Level 2 Model i.e simulating the user. We would model the task of visually searching a Target item in the Menu. A Reinforcement learning agent would model the cognitive behaviour of the user to derive a rational strategy of searching the target item. <a href="https://ashsingh.me/visualsearch2/">Part 2: Visual Search</a></h4>
+<h4 id="inpart2ofthisserieswewouldfocusonthelevel2modeliesimulatingtheuserwewouldmodelthetaskofvisuallysearchingatargetiteminthemenuareinforcementlearningagentwouldmodelthecognitivebehaviouroftheusertoderivearationalstrategyofsearchingthetargetitempart2visualsearch">In Part 2 of this series we would focus on the Level 2 Model i.e simulating the user. We would model the task of visually searching a Target item in the Menu. A Reinforcement learning agent would model the cognitive behaviour of the user to derive a rational strategy of searching the target item. <a href="https://aasheeshsingh.me/visualsearch2/">Part 2: Visual Search</a></h4>
 </blockquote>
 
             </section>
@@ -235,7 +241,7 @@ Awesome right! but not really, think of this if all I want to do is to compile c
 
                 <article class="post-card post tag-human-computer-interaction tag-reinforcement-learning tag-user-interfaces tag-menu-models">
         <a class="post-card-image-link" href="../visualsearch2/">
-            <div class="post-card-image" style="background-image: url(http://localhost:2368/content/images/2019/01/selection_time-1.png)"></div>
+            <div class="post-card-image" style="background-image: url(../content/images/2019/03/selection_time-1.png)"></div>
         </a>
     <div class="post-card-content">
         <a class="post-card-content-link" href="../visualsearch2/">
@@ -244,7 +250,7 @@ Awesome right! but not really, think of this if all I want to do is to compile c
                 <h2 class="post-card-title">Part 2 : Cognitive Models for Visual Search</h2>
             </header>
             <section class="post-card-excerpt">
-                <p>In Part 1 of this series, we discussed how simulating users behaviour would be the second step in the pipeline of building Adaptive Interfaces that personalise to user's needs. In this post, we</p>
+                <p>How does users performance vary across Menu layouts and could we simulate user behaviour with a Reinforcement learning. Let's find out!</p>
             </section>
         </a>
         <footer class="post-card-meta">
@@ -265,13 +271,13 @@ Awesome right! but not really, think of this if all I want to do is to compile c
         </a>
     </div>
     <span class="floating-header-divider">—</span>
-    <div class="floating-header-title">Adaptive User Interfaces: Software 3.0</div>
+    <div class="floating-header-title">Building Adaptive Interfaces: Software 3.0</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"></path>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Adaptive%20User%20Interfaces%3A%20Software%203.0&amp;url=http://localhost:2368/visualsearch1/" onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Building%20Adaptive%20Interfaces%3A%20Software%203.0&amp;url=http://localhost:2368/visualsearch1/" onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"></path></svg>
         </a>
         <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:2368/visualsearch1/" onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
@@ -305,7 +311,7 @@ Awesome right! but not really, think of this if all I want to do is to compile c
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
     </script>
-    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=ab86bfa1f5"></script>
+    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=33a73e7e1b"></script>
 
 
     <script>

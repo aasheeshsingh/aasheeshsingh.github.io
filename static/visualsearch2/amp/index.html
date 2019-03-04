@@ -2,7 +2,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Part 2 : Cognitive Models for Visual Search</title>
+    <title>Visual Menu Search</title>
 
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
@@ -13,26 +13,28 @@
     
     <meta property="og:site_name" content="Reproducible Machine Learning">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Part 2 : Cognitive Models for Visual Search">
-    <meta property="og:description" content="In Part 1 of this series, we discussed how simulating users behaviour would be the second step in the pipeline of building Adaptive Interfaces that personalise to user's needs. In this post, we would consider one such simulator model for the task of Visual Search in drop down Menus. Let">
+    <meta property="og:title" content="Visual Menu Search">
+    <meta property="og:description" content="How does users performance vary across Menu layouts and could we simulate user behaviour with a Reinforcement learning. Let's find out!">
     <meta property="og:url" content="http://localhost:2368/visualsearch2/">
-    <meta property="og:image" content="http://localhost:2368/content/images/2019/01/selection_time-1.png">
+    <meta property="og:image" content="http://localhost:2368/content/images/2019/03/selection_time-1.png">
     <meta property="article:published_time" content="2019-01-01T06:22:00.000Z">
-    <meta property="article:modified_time" content="2019-01-08T18:59:39.000Z">
+    <meta property="article:modified_time" content="2019-03-04T04:11:49.000Z">
     <meta property="article:tag" content="Human Computer Interaction">
     <meta property="article:tag" content="Reinforcement Learning">
     <meta property="article:tag" content="User Interfaces">
     <meta property="article:tag" content="Menu Models">
     
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Part 2 : Cognitive Models for Visual Search">
-    <meta name="twitter:description" content="In Part 1 of this series, we discussed how simulating users behaviour would be the second step in the pipeline of building Adaptive Interfaces that personalise to user's needs. In this post, we would consider one such simulator model for the task of Visual Search in drop down Menus. Let">
+    <meta name="twitter:title" content="Visual Menu Search">
+    <meta name="twitter:description" content="How does users performance vary across Menu layouts and could we simulate user behaviour with a Reinforcement learning. Let's find out!">
     <meta name="twitter:url" content="http://localhost:2368/visualsearch2/">
-    <meta name="twitter:image" content="http://localhost:2368/content/images/2019/01/selection_time-1.png">
+    <meta name="twitter:image" content="http://localhost:2368/content/images/2019/03/selection_time-1.png">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Aasheesh Singh">
     <meta name="twitter:label2" content="Filed under">
     <meta name="twitter:data2" content="Human Computer Interaction, Reinforcement Learning, User Interfaces, Menu Models">
+    <meta property="og:image:width" content="627">
+    <meta property="og:image:height" content="466">
     
     <script type="application/ld+json">
 {
@@ -60,13 +62,18 @@
         "url": "http://localhost:2368/author/ash/",
         "sameAs": []
     },
-    "headline": "Part 2 : Cognitive Models for Visual Search",
+    "headline": "Visual Menu Search",
     "url": "http://localhost:2368/visualsearch2/",
     "datePublished": "2019-01-01T06:22:00.000Z",
-    "dateModified": "2019-01-08T18:59:39.000Z",
-    "image": "http://localhost:2368/content/images/2019/01/selection_time-1.png",
+    "dateModified": "2019-03-04T04:11:49.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "http://localhost:2368/content/images/2019/03/selection_time-1.png",
+        "width": 627,
+        "height": 466
+    },
     "keywords": "Human Computer Interaction, Reinforcement Learning, User Interfaces, Menu Models",
-    "description": "In Part 1 of this series, we discussed how simulating users behaviour would be the second step in the pipeline of building Adaptive Interfaces that personalise to user&#x27;s needs. In this post, we would consider one such simulator model for the task of Visual Search in drop down Menus. Let",
+    "description": "How does users performance vary across Menu layouts and could we simulate user behaviour with a Reinforcement learning. Let&#x27;s find out!",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "http://localhost:2368/"
@@ -105,11 +112,11 @@
                 </section>
             </header>
             <figure class="post-image">
-                <amp-img src="http://localhost:2368/content/images/2019/01/selection_time-1.png" width="600" height="400" layout="responsive"></amp-img>
+                <amp-img src="http://localhost:2368/content/images/2019/03/selection_time-1.png" width="600" height="400" layout="responsive"></amp-img>
             </figure>
             <section class="post-content">
 
-                <p>In <a href="https://ashsingh.me/visualsearch1/">Part 1</a> of this series, we discussed how simulating users behaviour would be the second step in the pipeline of building Adaptive Interfaces that personalise to user's needs. In this post, we would consider one such simulator model for the task of Visual Search in drop down Menus.</p>
+                <p>In <a href="https://aasheeshsingh.me/visualsearch1/">Part 1</a> of this series, we discussed how simulating users behaviour would be the second step in the pipeline of building Adaptive Interfaces that personalise to user's needs. In this post, we would consider one such simulator model for the task of Visual Search in drop down Menus.</p>
 <p>Let us start with an example where our goal is to build a UI targeted towards a particular demographic(say, Medicine/Health tracking app for Elderly). One way we could approach this problem is to conduct experiments and use the insights gained (avg response time for selection, visual acuity, readability preference etc) in our design choices(font, color, layout, shortcuts, input methods) to ease usage amongst that demographic. This works well, but is expensive and takes time to conduct individual experiments. To avoid or aid this process, developing simulated models that mimic users strategy have been an active area of research in HCI. Broadly such methods can be divided into three categories:</p>
 <ul>
 <li>Map based( Salience, activation)</li>
@@ -174,14 +181,14 @@
 <h3 id="experiments">Experiments</h3>
 <p>In the aforementioned work, authors conducted experiments to measure <strong>Selection time</strong> in the Visual Search task to measure how a learner trained on one type of Menu performs across other menus.(on which it was not trained). The Selection time is made up of the time to fixate on an item and saccade duration. Their model corroborated what they observed in empirical data that Alphabetic menu layout is the most efficient in terms of selection time. In the results below, a comparison between Semantic and Unordered layout is done(Alphabetic to follow). The policy is trained on Semantically organised Menu items and the agent's selection time and Gaze proportion is evaluated on Semantic and Unordered Menus.</p>
 <p><strong>Selection Time:</strong><br>
-We compare the Selection Times of our learner with the results in the above work.<br>
-</p>
+We compare the Selection Times of our learner with the results in the above work.</p>
+<p></p>
 <center> Fig.5 Search Duration with 95% CI, Chen et.al,2015</center>
 <p>The above plot shows the Selection Time for the visual search task in a 10 item Menu. The agent's performance was recorded before and after training on Alphabetic, Semantic and Unordered Menus. For semantically trained learners, the mean selection time is 2000 ms and <u>avg steps ~ 4.6 </u>(~ 437ms per fixation) before making a selection.</p>
 <p>We demonstrate a similar plot for the learner's performance before and after training where it's trained on a Semantically organised Menu and its selection time is compared to its performance on an Unordered Menu(more comprehensive evaluation across menus to follow). For our experiments we used a 8 item Menu grouped in 2 and it took on an <u> avg~ 2.8 steps to successful selection</u> in a Semantic Menu.</p>
 <p></p>
 <p><strong>Gaze Proportion</strong></p>
-<p>Analyzing the gaze distribution of the user when it's interacting with an Interface is a key to building personalised adaptive UIs. We looked in <a href="https://ashsingh.me/visualsearch1/">Part 1</a> of this series how UI designers are interested in knowing about user's behavior(through mouse movements or gaze) when interacting with their product and thus Gaze Analytics as a Service has become an essential tool for them.(<a href="https://heatmap.com/">Heat Map Inc</a> sells such analytics services as Javascript wrappers)</p>
+<p>Analyzing the gaze distribution of the user when it's interacting with an Interface is a key to building personalised adaptive UIs. We looked in <a href="https://aasheeshsingh.me/visualsearch1/">Part 1</a> of this series how UI designers are interested in knowing about user's behavior(through mouse movements or gaze) when interacting with their product and thus Gaze Analytics as a Service has become an essential tool for them.(<a href="https://heatmap.com/">Heat Map Inc</a> sells such analytics services as Javascript wrappers)</p>
 <p>Continuing in similar fashion ,we take a look at the <strong>Gaze proportions</strong> on the Target item while navigating the Menu, first from the <a href="http://users.comnet.aalto.fi/oulasvir/pubs/pn1895-pcs-pdf.pdf">Chen et.al,2015</a> and then our experiments.</p>
 <p></p>
 <p>Down below, are the plots for <strong>Gaze proportions</strong> in the learned policies trained on Semantic Menus compared with Unordered Menu and Initial untrained learner.</p>
@@ -189,6 +196,7 @@ We compare the Selection Times of our learner with the results in the above work
 <p>Here we can see that an untrained agent, distributes the gaze evenly among all target items while the trained policy has learnt to focus on specific items in the menu while looking for target.</p>
 <p>The reason for such high gaze proportion when the Target is at 3(0 indexed x axis) is because the policy learnt to fixate on Item 3 as the first action to be taken for each episode, <u>as it allows the agent to encode the semantic relevances of both groups in the menu through peripheral vision</u> (encode info of one item above and down from fixation location) and update the belief state.</p>
 <p></p>
+<center> Fig: Gaze distribution over Menu types </center>
 <hr>
 <h3 id="conclusion">Conclusion</h3>
 <p>The work in Chen et. al,2015 assumes a <u>fully observable</u> and <u>deterministic</u> Ecology structure where the user knows exactly the relevances of the menu items. This is what our model would formulate as Expert behaviour in terms of observation mechanism. The inclusion of a internal belief distribution whose divergence from this expert true distribution could be used to model the "Familiarity" or "<strong>proficiency</strong>" of the user in this task.</p>
@@ -197,7 +205,7 @@ We compare the Selection Times of our learner with the results in the above work
 <p>The other features of this model are <u>scalablity</u> and dealing with observation noise. A tabular Q learner such as one used in the paper suffers from curse of dimensionality as we scale the state-action space, while this continuous model would be better suited to encode further perceptual information and corresponding noise.</p>
 <hr>
 <blockquote>
-<h4 id="inpart3ofthishciseriesnextweekthegoalwouldbetoreportcomprehensivestudiesforthismodelandhowbayesianinferencecouldbeusedforparametertuning">In part 3 of this HCI series next week the goal would be to report comprehensive studies for this model and how Bayesian inference could be used for parameter tuning.</h4>
+<h4 id="inpart3ofthishciserieswewouldinvestigatehowlikelihoodfreeinferencemethodsapproximatebayesiancomputationcouldbeusedtodeduceparametersofthismodelinainverselearningtypeparadigm">In part 3 of this HCI series we would investigate how Likelihood-free inference methods(Approximate Bayesian Computation) could be used to deduce parameters of this model in a inverse learning type paradigm.</h4>
 </blockquote>
 
 
